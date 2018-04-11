@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>导航下划线跟随效果</title>
+	<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	ul,li{
+		list-style: none;
+	}
+	ul{
+		display: flex;
+		position: fixed;
+		width: 800px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%,-50%);
+	}
+	li{
+		/* 这个定位很重要，相对自己定位，有占位 */
+		position: relative;
+		font-size: 24px;
+		padding:20px;
+		line-height: 1;
+		cursor: pointer;
+		transition: 0.2s all linear;
+	}
+	li::before{
+		content: "";
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 0;
+    height: 100%;
+    border-bottom: 2px solid #000;
+    transition: 0.2s all linear;
+	}
+	li:hover::before {
+    width: 100%;
+    top: 0;
+    left: 0;
+    transition-delay: 0.1s;
+    border-bottom-color: #000;
+}
+	li:hover ~ li::before {
+		/* 兄弟选择符：E~F
+				选择E元素后面的所有兄弟元素F */
+    left: 0;
+	}
+	li:active {
+		/* 激活时的效果 */
+    background: #000;
+    color: #fff;
+	}
+	</style>
+</head>
+<body>
+	<ul>
+		<li>神奇的</li>
+		<li>纯css完成的</li>
+		<li>导航</li>
+		<li>下划线跟随</li>
+		<li>效果</li>
+	</ul>
+</body>
+</html>
