@@ -3,7 +3,7 @@
 1.**纯Css导航下划线跟随效果（详细解说可以看chokcoco大大的博客）**
 -  <a href="http://htmlpreview.github.com/?https://github.com/boa182/html-css/blob/master/html/03%E5%AF%BC%E8%88%AA%E4%B8%8B%E5%88%92%E7%BA%BF%E8%B7%9F%E9%9A%8F%E6%95%88%E6%9E%9C.html">demo点我吖</a>
 
-2.**纯CSS波浪效果（可以用来做完成度或标题背景动画）**
+2.**纯CSS波浪效果**
 - 用途：可以用来展示任务完成百分比，或者标题背景动画
 - 思路：
 ```html
