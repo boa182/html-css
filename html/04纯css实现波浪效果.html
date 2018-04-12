@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .box {
+            width: 280px;
+            height: 280px;
+            position: fixed;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            overflow: hidden;
+            border-radius: 50%;
+            border: 5px solid skyblue;
+        }
+        
+        h1 {
+            position: absolute;
+            top: 160px;
+            left: 90px;
+            z-index: 100;
+            font-size: 60px;
+        }
+        
+        .waveBox {
+            width: 400px;
+            height: 445px;
+            background: skyblue;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: -165px;
+            left: -60px;
+        }
+        
+        .wave {
+            width: 340px;
+            height: 300px;
+            background: #fff;
+            border-radius: 45%;
+            animation: rotate 10s linear infinite;
+        }
+        
+        .smallWaveBox {
+            background: skyblue;
+            opacity: 0.5;
+        }
+        
+        .smallwave {
+            width: 340px;
+            height: 300px;
+            background: #fff;
+            border-radius: 45%;
+            animation: rotate 10s linear infinite;
+        }
+        
+        @keyframes rotate {
+            0% {
+                transform: rotateZ(0)
+            }
+            100% {
+                transform: rotateZ(360deg)
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <h1>30%</h1>
+        <div class="waveBox">
+            <div class="wave">
+                <div class="smallWaveBox">
+                    <div class="smallwave">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
