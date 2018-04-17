@@ -19,3 +19,19 @@
 </div>
 ```
 - <a href="http://htmlpreview.github.com/?https://github.com/boa182/html-css/blob/master/html/04%E7%BA%AFcss%E5%AE%9E%E7%8E%B0%E6%B3%A2%E6%B5%AA%E6%95%88%E6%9E%9C.html">波浪demo</a>
+
+3.**鼠标悬浮图片滑动文字效果**
+- 思路：
+```html
+    <!-- li设置overflow:hidden;position:relative;
+         p设置position:absolute;
+         通过改变li 的hover前后，p的bottom/top值，+transition实现滑动效果
+         注意的是，背景颜色透明，但字体不透明，需要用到 rgba(33, 33, 33, 0.8);    
+    -->
+    <li>
+      <img src="https://ss0.bdstatic.com/-0U0bnSm1A5BphGlnYG/tam-ogel/c70247aeafbe5a4699b0223bc8dd6fe4_222_222.jpg">
+      <p>美的是一家领先的消费电器、暖通空调、机器人及工业自动化系统的科技企业集团</p>
+    </li>
+```
+- <a href="http://htmlpreview.github.com/?https://github.com/boa182/html-css/blob/master/html/04%E7%BA%AFcss%E5%AE%9E%E7%8E%B0%E6%B3%A2%E6%B5%AA%E6%95%88%E6%9E%9C.html">demo1</a>
+- <a href="http://htmlpreview.github.com/?https://github.com/boa182/html-css/blob/master/html/04%E7%BA%AFcss%E5%AE%9E%E7%8E%B0%E6%B3%A2%E6%B5%AA%E6%95%88%E6%9E%9C.html">demo2</a>
