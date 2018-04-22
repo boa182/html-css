@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>sunny</title>
+  <style>
+    *{
+      margin: 0;
+      padding: 0;
+    }
+    body,html{
+      width: 100%;
+      height: 100%;
+      background: #0BF;
+    }
+    h1{
+      padding: 60px 0 40px 0;
+      text-align: center;
+      color: #fff;
+      font-size: 54px;
+      letter-spacing: 10px;
+    }
+    .big-box{
+      display: flex;
+      flex-wrap: wrap;
+      margin: 20px;
+    }
+    ul,li{
+      list-style: none;
+    }
+    /* 太阳盒子的公共样式 */
+    .sunny{
+      position: relative;
+      width: 300px;
+      height: 300px;      
+    }
+    /* 第一种太阳的样式 */
+    .type-one li{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 130px;
+      border: 3px solid yellow;
+      border-radius: 0.25em;      
+      transform-origin: 0 0;
+    }
+    .type-one li:nth-child(1){
+      animation: spin1 12s linear infinite;
+    }
+    .type-one li:nth-child(2){
+      animation: spin2 12s linear infinite;
+    }
+    .type-one li:nth-child(3){
+      animation: spin3 12s linear infinite;
+    }
+    .type-one span{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 55px;
+      height: 55px;
+      border: 7px solid orange;
+      border-radius: 50%;
+      background: #0BF;
+      box-shadow: 0 0 0 10px #0BF;
+    }
+    @keyframes spin1 {
+      0% {transform: rotateZ(0deg) translate(-50%, -50%);}
+      100% {transform: rotateZ(360deg) translate(-50%, -50%);}
+    }
+    @keyframes spin2 {
+      0% {transform: rotateZ(60deg) translate(-50%, -50%);}
+      100% {transform: rotateZ(420deg) translate(-50%, -50%);}
+    }
+    @keyframes spin3 {
+      0% {transform: rotateZ(120deg) translate(-50%, -50%);}
+      100% {transform: rotateZ(480deg) translate(-50%, -50%);}
+    }
+    /* 第二种太阳样式 */
+    .type-two li {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      border: 3px solid yellow;
+      border-radius: 0.25em;     
+      transform-origin: 0 0;
+    }
+    .type-two li:nth-child(1){
+      transform: rotateZ(45deg) translate(-50%, -50%);
+    }
+    .type-two li:nth-child(2){
+      transform: rotateZ(90deg) translate(-50%, -50%);
+    }
+    .type-two li:nth-child(3){
+      transform: rotateZ(135deg) translate(-50%, -50%);
+    }
+    .type-two li:nth-child(4){
+      transform: rotateZ(0deg) translate(-50%, -50%);
+    }
+    .type-two li:nth-child(2n){
+      animation: changeWidth2 1s linear infinite reverse;
+    }
+    .type-two li:nth-child(2n-1){
+      animation: changeWidth1 1s linear infinite reverse;
+    }
+    .type-two span{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 62px;
+      height: 62px;
+      border-radius: 50%;
+      background: yellow;
+      box-shadow: 0 0 0 10px #0BF;
+      animation: changeSize 3s linear infinite;
+    }
+    @keyframes changeWidth1 {
+      0% {width: 100px;}
+      50% {width: 130px;}
+      100% {width: 100px;}
+    }
+    @keyframes changeWidth2 {
+      0% {width: 130px;}
+      50% {width: 100px;}
+      100% {width: 130px;}
+    }
+    @keyframes changeSize {
+      0% {transform: scale(1,1) translate(-50%, -50%);}
+      50% {transform: scale(1.1,1.1) translate(-50%, -50%);}
+      100% {transform: scale(1,1) translate(-50%, -50%);}
+    }
+    /* 第三种太阳样式 */
+    .type-three li {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 150px;
+      height: 22px;
+      transform-origin: 0 0;
+      background-color:  rgba(255, 235, 255, 0.2);
+    }
+    .type-three li:nth-child(1) {
+      animation: run1 8s linear infinite;
+    }
+    .type-three li:nth-child(2) {
+      animation: run2 8s linear infinite;
+    }
+    .type-three span{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 106px;
+      height: 106px;
+      border-radius: 50%;
+      background-color: rgba(255, 255, 0, 0.2)
+    }
+    .type-three i{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 75px;
+      height: 75px;
+      border-radius: 50%;
+      background: yellow;
+    }
+    @keyframes run1 {
+      0% {transform: rotateZ(90deg) translate(-50%, -50%);}
+      100% {transform: rotateZ(450deg) translate(-50%, -50%);}
+    }
+    @keyframes run2 {
+      0% {transform: rotateZ(0deg) translate(-50%, -50%);}
+      100% {transform: rotateZ(360deg) translate(-50%, -50%);}       
+    }
+  </style>
+</head>
+<body>
+  <h1>天气系列之太阳</h1>
+  <div class="big-box">
+      <!-- 第一种太阳 -->
+      <div class="sunny type-one">
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <span></span>
+      </div>
+      <!-- 第二种太阳 -->
+      <div class="sunny type-two">
+        <ul>
+          <li></li>
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+        <span></span>
+      </div>
+      <div class="sunny type-three">
+        <ul>
+          <li></li>
+          <li></li>
+        </ul>
+        <span>
+          <i></i>
+        </span>
+      </div>
+  </div>
+</body>
+</html>
